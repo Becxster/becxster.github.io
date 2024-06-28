@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+:root {
+    /* Palette */
+    --purp: #6C43E2;
+    --yell: #D4B625;
+    --shaded: #272626;
+    --dpurp: #662583;
+    --biagreen: #5af4a7;
+    --biapink: #ef81d0dd;
+    
+ }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    color: white;
+    line-height: 1.4;
+    background-color: var(--purp);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#navbar{
+    background-color: var(--purp);
+    z-index: 999999;
+    height: 80px;
+    border-bottom: var(--yell) 4px solid;
+}
+
+
+.navbar li {
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    list-style-type: none;
+}
+
+
+.navbar .flex{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 26px;
+    
+}
+
+nav a { 
+    align-self: center;
+    color: var(--book-yellow-dark);
+    padding: 20px 20px 20px 20px;
+    margin: 5px;
+    /* border-radius: 8px; */
+    font-size: larger;
+    transition: background-color .25s, box-shadow .15s;
+    text-decoration: none;
+}
+
+.logo img {
+    scale: 1.4;
+    object-fit: cover;
+  }
+  
+.navbar .logo b {
+    font-weight: 300;
+}
+
+nav a:hover {
+    background-color: var(--yell);
+}
+
+
+ .navbar .container {
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+}
+
+/* Main Page 1 */
+
+.mp1 {
+    padding-top: 0px;
+    background-color: var(--shaded);
+}
+
+
+
+.mp1 .cut-container {
+    width: 800px;
+    overflow: hidden
+}
+
+
+.mp1 .overlap-container {
+    position: relative;
+    width: 600px; 
+    height: 600px; 
+}
+
+.mp1 .overlap-container .face-img {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    width: 540px; /* Ensure the images fit the container */
+    height: 540px; /* Ensure the images fit the container */
+    z-index: 2;
+}
+
+.mp1 .overlap-container .dec0 {
+    object-fit: cover;
+    position: absolute;
+    top: -260px;
+    left: -834px;
+    width: 1000px;
+    z-index: 1;
+}
+
+
+/* Higher z index */
+.mp1 .overlap-container .dec1 {
+    object-fit: cover;
+    position: absolute;
+    top: 320px;
+    left: -410px;
+    width: 1000px;
+    z-index: 3;
+}
+
+.mp1 .overlap-container .dec2 {
+    object-fit: cover;
+    position: absolute;
+    top: 156px;
+    right: -154px;
+    width: 1000px;
+    z-index: 1;
+}
+
+.mp1 .main-container {
+    display: flex;
+    height: 649px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mp1 #blurb {
+    position: absolute;
+    margin: 70px 100px 100px 0;
+    left: 400px;
+    
+  }
+  
+
+.mp1 .flex-container{
+    display: flex;
+
+}
+
+
+.mp1 .blurb-flex {
+    display: block;
+    width: 400px;
+    z-index: 100;
+    padding: 20px;
+    background-color: var(--purp);
+}
+
+.blurb-flex h1 {
+    font-size: 2em
+}
+
+.blurb-flex p {
+    font-size: 1em;
+}
+
+.mp1 .links-flex-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 400px; /* Set the desired width of the rectangle */
+    height: 400px; /* Set the desired height of the rectangle */
+    background-color: var(--yell);
+    z-index: 99; 
+    margin-top: 10px; /* Optional: Add margin to separate the rectangle from the flexbox */
+    top: 20%; /* Position below the flexbox */
+    left: 20px;
+
+}
+
+.mp1 .links-flex {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    width: 100%;
+    position: absolute;
+    flex-direction: row;
+    z-index: 0;
+    
+   
+  }
+
+  .mp1 .links-flex img {
+    height: 150px;
+  }
+
+  
+
+  @media (max-width: 900px) {
+    .mp1 .overlap-container .face-img {
+        position: relative;
+        top: -80px;
+        left: 0px;
+        /* width: 300px; 
+        height: 300px;  */
+        z-index: 2;
+    }
+
+    .mp1 .overlap-container {
+        display: flex;
+        width: 400px;
+        height: 800px;
+        justify-content: center;
+        /* align-items: center; */
+
+    }
+
+    .dec0, .dec1, .dec2 {
+       display: none;
+    }
+
+    .mp1 .overlap-container .dec2 {
+        top: 0px;
+        left: -300px;
+    }
+
+    .mp1 .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        align-items: center;
+        height: 1000px;
+        gap: 0;
+    } 
+   
+
+    .mp1 .links-flex-container {
+        left: 0px;
+        border-radius: 10px;
+    }
+
+    .mp1 .blurb-flex {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    .blurb-flex h1, .blurb-flex p {
+        text-align: center;
+    }
+
+    #blurb {
+        position: relative;
+        margin: 0;
+        top: 320px;
+        left: 0px;
+              
+    }
+  
+  }
+
+
+/* Main Page 2 */
+
+.mp2 {
+    z-index: 4;
+    background-color: var(--shaded);
+}
+
+
+/* Project Preview Page */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.proj1 {
+    background-color: #D4B625;
+    height: 800px;
+}
+
+.proj1 .proj-title-container {
+    display: flex;
+    width: 400px;
+    height: 170px;
+    position: relative;
+    justify-content: center;
+}
+
+.proj1 .proj-title-container img {
+    position: absolute;
+    z-index: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+}
+
+.proj1 .proj-title-container h1 {
+    z-index: 1;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.proj1 .projp-flex {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.proj2 {
+    background-color: #662583;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--purp);
+    text-align: center;
+}
+
+.footer-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-flex p {
+    font-size: 1.3em;
+}
+
+
+
+
+
+
+
+.rainbow-box-1 {
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    animation: glow1 10s linear infinite;
+}
+
+.cont {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.gray-box {
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.rainbow-box-2 {
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: 0;
+    animation: glow2 10s linear infinite;
+}
+
+
+@keyframes glow1 {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        border-color: rgba(255, 0, 0, 0.5);
+    }
+    14% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+        border-color: rgba(255, 165, 0, 0.5);
+    }
+    28% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+        border-color: rgba(255, 255, 0, 0.5);
+    }
+    42% {
+        box-shadow: 0 0 20px rgba(0, 128, 0, 0.5);
+        border-color: rgba(0, 128, 0, 0.5);
+    }
+    57% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+        border-color: rgba(0, 0, 255, 0.5);
+    }
+    71% {
+        box-shadow: 0 0 20px rgba(75, 0, 130, 0.5);
+        border-color: rgba(75, 0, 130, 0.5);
+    }
+    85% {
+        box-shadow: 0 0 20px rgba(238, 130, 238, 0.5);
+        border-color: rgba(238, 130, 238, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        border-color: rgba(255, 0, 0, 0.5);
+    }
+}
+
+@keyframes glow2 {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        border-color: rgba(255, 0, 0, 0.5);
+    }
+    14% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+        border-color: rgba(255, 165, 0, 0.5);
+    }
+    28% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+        border-color: rgba(255, 255, 0, 0.5);
+    }
+    42% {
+        box-shadow: 0 0 20px rgba(0, 128, 0, 0.5);
+        border-color: rgba(0, 128, 0, 0.5);
+    }
+    57% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+        border-color: rgba(0, 0, 255, 0.5);
+    }
+    71% {
+        box-shadow: 0 0 20px rgba(75, 0, 130, 0.5);
+        border-color: rgba(75, 0, 130, 0.5);
+    }
+    85% {
+        box-shadow: 0 0 20px rgba(238, 130, 238, 0.5);
+        border-color: rgba(238, 130, 238, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        border-color: rgba(255, 0, 0, 0.5);
+    }
+}

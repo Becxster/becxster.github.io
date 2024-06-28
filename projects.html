@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Beck Edwards</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div class="container flex">
+      <a href="index.html">
+        <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
+      </a>
+
+      <nav>
+        <ul>
+            <li><a href="main.html">Biography</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </nav>
+
+  <!-- Main Page 1 -->
+  <section class="project-preview">
+    <div class="container">
+    <div class="project-grid">
+      <div class="item proj1">
+        <div class="projp-flex">
+          <div class="item">
+            <div class="proj-title-container">
+              <h1>Rocket Automatic Recovery System</h1>
+              <img src="/Assets/proj-page/project_title_banner.png" alt="">
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="item proj2">
+        <div class="projp-flex">
+          <p>hi</p>
+        </div>
+      </div>
+      <div class="item proj3"></div>
+      <div class="item"></div>
+      <div class="item proj4"></div>
+    </div>
+    <div class="project-div">
+      <img src="/Assets/proj-page/project-divider_1.png" alt="">
+    </div>
+
+  </div>
+  </section>
+
+
+  <script>
+    function moveBlurb() {
+      const blurb = document.getElementById('blurb');
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth < 1700) {
+        const moveProportion = (1700 - screenWidth) / 1700; // Calculate proportion
+        const moveAmount = moveProportion * 100; // Adjust this value as needed
+        blurb.style.left = `-${moveAmount}px`; // Move to the left proportionally
+      } else {
+        blurb.style.left = '0'; // Reset position if screen width is >= 1700px
+      }
+    }
+
+    // Run the function when the page loads and when the window is resized
+    window.addEventListener('load', moveBlurb);
+    window.addEventListener('resize', moveBlurb);
+  </script>
+
+</body>
+
+</html>
