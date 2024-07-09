@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Beck Edwards</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar" id="navbar">
+    <div class="container flex">
+      <a href="index.html">
+        <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="main.html">Biography</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </nav>
+
+  <section class="projects-intro">
+    <div class="flex">
+      <h1>My Projects</h1>
+      <hr>
+      <sub>Here you can find the recent projects I have completed or am currently working on. Click on each one to find
+        more details!</sub>
+    </div>
+    
+  </section>
+
+  <!-- Main Page 1 -->
+  <section class="project-preview">
+    <div class="pgrid-container">
+      <div class="project-grid">
+        <div class="item proj1">
+          <div class="projp-flex">
+            <div class="proj-title-container">
+              <h1>Rocket Automatic Recovery System</h1>
+              <img src="/Assets/proj-page/project_title_banner_1.png" alt="" class="projp-img1">
+            </div>
+
+            <div class="proj-body-container">
+              <img src="/Assets/proj-page/AutoRecovery_Bay.png" alt="Auto-Recovery Bay">
+              <div class="proj-body-flex hover-rise hover-border">
+                <p>I led a team of 20 students to
+                  create a system focused on
+                  recovering part of a rocket
+                  from the air automatically using python,
+                  a raspberry pi, and a toy kite!</p>
+                <div class="learn-more-flex">
+                  <h1>Learn More</h1>
+                  <img src="/Assets/proj-page/yellow_arrow.png" alt="" class="yellow-arrow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item proj2">
+          <div class="projp-flex">
+            <p>hi</p>
+          </div>
+        </div>
+        <div class="item proj3"></div>
+        <div class="item"></div>
+        <div class="item proj4"></div>
+      </div>
+      <div class="proj-div">
+        <img src="/Assets/proj-page/project_div.png" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hoverTarget = document.querySelector('.hover-border');
+
+    hoverTarget.addEventListener('mouseover', () => {
+      hoverTarget.classList.add('rainbow-box');
+    });
+
+    hoverTarget.addEventListener('mouseout', () => {
+      hoverTarget.classList.remove('rainbow-box');
+    });
+  }); 
+  </script>
+
+</body>
+
+</html>

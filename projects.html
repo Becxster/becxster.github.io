@@ -20,79 +20,82 @@
         <ul>
           <li><a href="main.html">Biography</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="resume.html">Resume</a></li>
         </ul>
       </nav>
     </div>
   </div>
-  </nav>
+
 
   <section class="projects-intro">
+
     <div class="flex">
-      <h1>My Projects</h1>
-      <hr>
-      <sub>Here you can find the recent projects I have completed or am currently working on. Click on each one to find
-        more details!</sub>
+        <h1>Projects</h1>
+        <sub><b>Click the UFOs</b> to explore my portfolio. Here, you can find the stuff I'm working on as well as some things I finished in the past. Hope you enjoy :)</sub>
+    </div>
+
+
+  </section>
+
+
+  <section class="projects-section">
+    <div class="space-container">
+        <div class="space-flex ufo-flex-1">
+          <a href="/projects/WorkingTogether.html">
+            <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-1">
+          </a>
+          </div>
+        <div class="space-flex ufo-flex-2">
+            <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-2">
+        </div>
+       <div class="space-flex ufo-flex-3">
+        <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-3">
+       </div>
+        
+    </div>
+
+
+  </section>
+
+
+
+
+  <footer>
+    <div class="footer-flex">
+      <div class="item">
+        <p>Made from scratch with HTML, CSS, & JavaScript<br>
+      </div>
+      <div class="item"><p>&#9775;</p></div>
+      <div class="item">
+        <p><a href="mailto:bae5@rice.edu">bae5@rice.edu</a></p>
+      </div>
     </div>
     
-  </section>
-
-  <!-- Main Page 1 -->
-  <section class="project-preview">
-    <div class="pgrid-container">
-      <div class="project-grid">
-        <div class="item proj1">
-          <div class="projp-flex">
-            <div class="proj-title-container">
-              <h1>Rocket Automatic Recovery System</h1>
-              <img src="/Assets/proj-page/project_title_banner_1.png" alt="" class="projp-img1">
-            </div>
-
-            <div class="proj-body-container">
-              <img src="/Assets/proj-page/AutoRecovery_Bay.png" alt="Auto-Recovery Bay">
-              <div class="proj-body-flex hover-rise hover-border">
-                <p>I led a team of 20 students to
-                  create a system focused on
-                  recovering part of a rocket
-                  from the air automatically using python,
-                  a raspberry pi, and a toy kite!</p>
-                <div class="learn-more-flex">
-                  <h1>Learn More</h1>
-                  <img src="/Assets/proj-page/yellow_arrow.png" alt="" class="yellow-arrow">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item proj2">
-          <div class="projp-flex">
-            <p>hi</p>
-          </div>
-        </div>
-        <div class="item proj3"></div>
-        <div class="item"></div>
-        <div class="item proj4"></div>
-      </div>
-      <div class="proj-div">
-        <img src="/Assets/proj-page/project_div.png" alt="">
-      </div>
-    </div>
-  </section>
+  </footer>
 
 
   <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const hoverTarget = document.querySelector('.hover-border');
+    function sway(element) {
+      const amplitude = 10; // The maximum distance the object moves up and down
+      const period = 3000; // Duration of one full cycle in milliseconds
+      const intercept = 270; 
 
-    hoverTarget.addEventListener('mouseover', () => {
-      hoverTarget.classList.add('rainbow-box');
-    });
+      function animate() {
+        const time = Date.now();
+        const offsetY = amplitude * Math.sin((1 * Math.PI * time) / period) + intercept;
+        element.style.transform = `translate(0%, calc(-50% + ${offsetY}px))`;
 
-    hoverTarget.addEventListener('mouseout', () => {
-      hoverTarget.classList.remove('rainbow-box');
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const swayObject = document.getElementsByClassName("space-flex");
+      sway(swayObject);
     });
-  }); 
+  
   </script>
 
 </body>

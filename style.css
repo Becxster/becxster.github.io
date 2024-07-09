@@ -32,6 +32,10 @@ a {
 }
 
 
+.flex {
+    display: flex;
+}
+
 .hover-rise {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -312,158 +316,75 @@ nav a:hover {
 
 /* Project Preview Page */
 
+
 .projects-intro {
     background-color: var(--shaded);
-    border-bottom: 4px solid palevioletred;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 0px 20px 0px;
 }
 
 .projects-intro .flex {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.projects-intro h1 {
-    font-size: 2em;
-    text-align: center;
-}
-
-.projects-intro hr {
-    width: 40%;
-    margin: 10px auto; /* Center the HR element and add vertical margins */
-    border: 0.3px solid whitesmoke; /* Customize the border as needed */
-}
-
-.projects-intro sub {
-    font-weight: 400;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.project-preview {
-    background-color: white;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.proj1 {
-    background-color: #D4B625;
-    height: 800px;
-}
-
-.proj1 .proj-title-container {
-    display: flex;
-    width: 400px;
-    height: 130px;
-    position: relative;
-    justify-content: center;
-    z-index: 0;
-    margin-bottom: 40px;
-}
-
-.proj1 .proj-title-container img {
-    position: absolute;
-    z-index: 0;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-.proj1 .proj-title-container h1 {
-    z-index: 1;
-    font-size: 2.2em;
-    font-weight: 600;
-    text-align: center;
-}
-
-.proj1 .projp-flex {
-    flex-direction: column;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-.proj-body-container {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-items: center; /* Optional: to center align items horizontally */
-    width: 80%;
+.projects-intro h1 {
+    font-size: 3em;
 }
 
-.proj-body-flex {
-    display: flex;
-    position: absolute;
-    border: 5px solid transparent;
-    left: 200px;
-    background-color: var(--shaded);
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    padding: 30px;
-    gap: 30px;
-    z-index: 2;
-    
-}
-
-.proj-body-container .projp-img1 {
-    position: absolute;
-    left: 20px;
-    margin: 30px;
-    top: -20px;
-}
-
-.proj-body-flex p  {
-    font-size: 1.5em;
+.projects-intro sub {
+    font-size: 1.4em;
     text-align: center;
+    padding-top: 5px;
+    max-width: 50%;
 }
 
-.learn-more-flex {
+
+
+.projects-section {
+    height: 4000px;
+    background: linear-gradient(to bottom, var(--shaded), rgb(2, 2, 128), var(--purp));
+}
+
+.space-container {
     display: flex;
-    flex-direction: row;
+    height: inherit;
+    grid-template-columns: 1;
     justify-content: center;
-    gap: 30px;
-    align-self: right;
-}
-
-.learn-more-flex img {
-    height: 30px;
-}
-
-
-
-.pgrid-container {
+    align-items: center;
     position: relative;
-     /* Optional: to center align items horizontally */
 }
 
-.pgrid-container .proj-div {
+.space-flex {
     display: flex;
     position: absolute;
-    top: 0px;
-    right: 40%;
-    height: 800px;
-    width: 200px;
-    z-index: 3;
+    align-items: center;
+    justify-content: center;
 }
 
-.pgrid-container .proj-div img {
-    width: 100%;
+.ufo-flex-1 {
+    top: 60px;
+    left: 20%;
+}
+
+.ufo-flex-2 {
+    top: 300px; 
+    right: 10%;
+
+}
+
+.ufo-flex-3 {
+    top: 700px;
+    left: 15%;
+
+}
+
+.space-flex img:hover {
+    cursor: pointer;
 }
 
 
 
-
-
-.proj2 {
-    background-color: #662583;
-}
 
 
 
@@ -575,3 +496,183 @@ footer {
         border-color: rgba(255, 0, 0, 0.5);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OLD STUFF */
+
+
+/* .projects-intro-old {
+    background-color: var(--shaded);
+    border-bottom: 4px solid palevioletred;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.projects-intro-old .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-intro-old h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.projects-intro-old hr {
+    width: 40%;
+    margin: 10px auto; 
+    border: 0.3px solid whitesmoke; 
+}
+
+.projects-intro-old sub {
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.project-preview {
+    background-color: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.proj1 {
+    background-color: #D4B625;
+    height: 800px;
+}
+
+.proj1 .proj-title-container {
+    display: flex;
+    width: 400px;
+    height: 130px;
+    position: relative;
+    justify-content: center;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+
+.proj1 .proj-title-container img {
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.proj1 .proj-title-container h1 {
+    z-index: 1;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.proj1 .projp-flex {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.proj-body-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center; 
+    width: 80%;
+}
+
+.proj-body-flex {
+    display: flex;
+    position: absolute;
+    border: 5px solid transparent;
+    left: 200px;
+    background-color: var(--shaded);
+    flex-direction: column;
+    
+    padding: 30px;
+    gap: 30px;
+    z-index: 2;
+    
+}
+
+.proj-body-container .projp-img1 {
+    position: absolute;
+    left: 20px;
+    margin: 30px;
+    top: -20px;
+}
+
+.proj-body-flex p  {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.learn-more-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-self: right;
+}
+
+.learn-more-flex img {
+    height: 30px;
+}
+
+
+
+.pgrid-container {
+    position: relative;
+     
+}
+
+.pgrid-container .proj-div {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 40%;
+    height: 800px;
+    width: 200px;
+    z-index: 3;
+}
+
+.pgrid-container .proj-div img {
+    width: 100%;
+}
+
+
+
+
+
+.proj2 {
+    background-color: #662583;
+}
+
+ */

@@ -20,12 +20,11 @@
         <ul>
           <li><a href="main.html">Biography</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="resume.html">Resume</a></li>
         </ul>
       </nav>
     </div>
   </div>
-  </nav>
 
   <!-- Main Page 1 -->
   <section class="mp1">
@@ -103,11 +102,9 @@
 
     // Calculate the new left position proportionally
     let newLeft = minLeft;
-    if (windowWidth > 900) {
-      if (windowWidth < maxWindowWidth) {
+    if (windowWidth > 900 && windowWidth < maxWindowWidth) {
       newLeft = (minLeft + (maxLeft - minLeft) * (windowWidth / maxWindowWidth)) * 4;
-    }
-    } else if (windowWidth > 900) {
+    } else if (windowWidth && windowWidth > maxWindowWidth) {
       newLeft = 700
     } else {
       newLeft = 0
