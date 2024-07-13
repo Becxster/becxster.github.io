@@ -6,8 +6,7 @@
     --yell: #D4B625;
     --shaded: #272626;
     --dpurp: #662583;
-    --biagreen: #5af4a7;
-    --biapink: #ef81d0dd;
+    --posterblue: #3d85c6ff;
     
  }
 
@@ -32,9 +31,26 @@ a {
 }
 
 
-.flex {
+.flex, .h-flex, .v-flex {
     display: flex;
 }
+
+.h-flex {
+    flex-direction: row;
+}
+
+.v-flex {
+    flex-direction: column;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .hover-rise {
     transition: transform 0.3s, box-shadow 0.3s;
@@ -48,7 +64,7 @@ a {
 
 #navbar{
     background-color: var(--purp);
-    z-index: 999999;
+    z-index: 9;
     height: 80px;
     border-bottom: var(--yell) 4px solid;
 }
@@ -349,6 +365,7 @@ nav a:hover {
 .space-container {
     display: flex;
     height: inherit;
+    width: inherit;
     grid-template-columns: 1;
     justify-content: center;
     align-items: center;
@@ -364,20 +381,23 @@ nav a:hover {
 
 .ufo-flex-1 {
     top: 60px;
-    left: 20%;
 }
 
 .ufo-flex-2 {
     top: 300px; 
-    right: 10%;
+    left: 80%;
 
 }
 
 .ufo-flex-3 {
     top: 700px;
-    left: 15%;
 
 }
+
+.space-container img {
+    transform: translateX(-50%);
+}
+
 
 .space-flex img:hover {
     cursor: pointer;
@@ -385,11 +405,325 @@ nav a:hover {
 
 
 
+/* Eclipse Page */
+
+.autorec-heading {
+    background-color: var(--shaded);
+    border-bottom: goldenrod solid 4px;
+}
+
+.autorec-heading .container {
+    position: relative;
+    left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.autorec-heading .flex {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--shaded), var(--shaded), var(--shaded), var(--shaded), transparent); /* Gradient from black to transparent */
+    height: 200px;
+    width: 600px;
+    z-index: 1;
+}
+
+.autorec-heading .flex .cool-title {
+    position: relative;
+    height: 300px;
+    width: auto;
+
+}
+
+.autorec-heading h1 {
+    position: absolute;
+    font-size: 2.2em;
+    font-weight: 400;
+    text-align: center;
+    height: 100px;
+}
+
+.autorec-heading #moveR {
+    position: absolute;
+    height: 100px;
+    width: auto;
+    left: 400px;
+    z-index: 0;
+}
+
+.autorec-body-h .white-cont {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.672);
+    padding: 15px 0px 15px 0px;
+
+}
+
+.autorec-body-h .h-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.autorec-body-h .h-flex h1 {
+    font-size: 4em;
+    font-weight: 400;
+    color: black;
+}
+
+
+.autorec-body-1 .flex {
+    padding-top: 0px;
+}
+
+.autorec-body-1 p {
+    font-size: 23px;
+    text-align: center;
+}
+
+.autorec-body-1 .words-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px 20px 20px;
+    width: 550px;
+}
+
+.autorec-body-1 .flex {
+    justify-content: space-between;
+
+}
+
+
+.autorec-body-1 .img-cont {
+    display: flex;
+    width: 60vw;
+}
+
+
+
+.autorec-body-1 .clip-diagonal {
+    width: 100%; /* Set the height of the image */
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+    object-fit: cover; /* Ensure the image covers the entire clipping path */
+
+}
+
+
+.autorec-poster-sec {
+    background-color:var(--posterblue);
+}
+
+
+
+.autorec-poster-sec .v-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.autorec-poster-sec .v-flex sub {
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.autorec-poster-sec .v-flex sub:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: wheat;
+}
+
+
+.autorec-poster-sec h1 {
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.autorec-poster-sec p {
+    text-align: center;
+    font-size: 23px;
+}
+
+.autorec-poster-sec .words-container {
+    margin: 20px 100px 30px 100px;
+    display: flex;
+    width: 1fr;
+}
+
+.autorec-body-2 {
+    background-color: var(--dpurp);
+
+}
+
+.autorec-body-2 .h-flex {
+    justify-content: center;
+    gap: 100px;
+}
+
+.autorec-body-2 .h-flex .plx {
+    height: 500px;
+    border-left: solid #272626 5px;
+
+
+}
+
+.autorec-body-2 .plx img {
+    height: 100%;
+}
+
+.autorec-body-2 .words-container {
+    padding-top: 60px;
+    display: flex;
+    width: 40vw;
+    text-align: center;
+
+}
+
+.autorec-body-2 p {
+    font-size: 23px;
+}
+
+
+#pl-bg {
+    background-image: url(/Assets/proj-page/planet-bg.svg);
+   background-size: 200vw;
+   background-position-y: inherit;
+   background-repeat: no-repeat;
+}
+
+
+.autorec-body-2 .container {
+    padding: 40px 0px 40px 0px;
+}
+
+.autorec-body-2 .h-flex {
+    background-color: rgba(249, 248, 246, 0.688);
+    padding: 40px 0px 40px 0px;
+    border-top: #272626eb solid 4px;
+}
+
+
+.autorec-body-2 .h-flex .outer-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.autorec-body-2 .h-flex .outer-flex img{
+    width: 1fr;
+}
+
+.autorec-body-2 .h-flex .outer-flex .flex{
+    width: 1fr;
+}
 
 
 
 
 
+
+/* POPUPS */
+.popup {
+    position: fixed;
+    visibility: hidden;
+    overflow-y: hidden;  /* Maybe give everything else an id that prevents scrolling rather than just disabling overflow on body */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+  }
+  
+  .popup-container {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .open-popup {
+    visibility: visible;
+  }
+  
+  .popup .cs-bg {
+    top: 10px;
+    bottom: 30px;
+    right: 40px;
+    left: 40px;
+    position: absolute; 
+    overflow-y: hidden;
+    padding: 10px;
+    background-color: white;
+    border: solid 5px var(--strong-1);
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .popup .flex {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1000;
+  }
+  
+  .popup h4 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: -45px
+  }
+  
+  .popup p {
+    text-align: center;
+    margin: 20px;
+    
+  }
+  
+  #pop-close-btn {
+    z-index: 100;
+  }
+  
+  
+  .pdf-emb .item {
+    width: 1000px;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .pdf-emb {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    border: var(--posterblue) solid 3px;
+    overflow: scroll;
+  }
+
+
+  .x-button{
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px;
+
+  }
+  
+  .x-button button {
+    border: none;
+    background: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .x-button img{
+    width: 25px;
+    height: 25px;
+    border: none;
+  }
 
 
 /* Footer */

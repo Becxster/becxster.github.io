@@ -3,4 +3,5 @@ it changes to a different picture of me
 
 2. Change fonts 
 
+3. Use PDF.js (import using cdn) to make embedded pdfs smoother
 

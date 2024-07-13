@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/Assets/WebsiteLogo.png" type="image/png">
+
+    <title>Beck Edwards</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="container flex">
+            <a href="index.html">
+                <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="/main.html">Biography</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/resume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    
+
+    <section class="autorec-body-h">
+        <div class="white-cont">
+            <div class="h-flex">
+                <h1>Me and</h1>
+                <img src="/Assets/proj-page/rice_eclipse.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <section class="autorec-heading">
+        <div class="container">
+            <div class="flex">
+                <img src="/Assets/proj-page/auto-recov-head.png" alt="" class="cool-title">
+            </div>
+            <img src="/Assets/proj-page/brocket_fire.png" alt="" id="moveR">
+        </div>
+    </section>
+        
+    <section class="autorec-body-1">
+    
+        <div class="flex">
+            <div class="img-cont">
+                <img src="/Assets/proj-page/drop_test.jpg" alt="" class="clip-diagonal">
+            </div>
+            <div class="words-container">
+                <div class="item">
+                    <p>I have been a member of Rice Eclipse, Rice University's competition rocket club, since my freshman year. In 2023, I became a team lead. 
+                        <br><br>
+                        Many of Eclipse's rockets end up in inconvenient places after launching due to winds and other random
+                        variables. Sometimes, our creations end up in private property, or in places hard to travel to. (A
+                        couple years back, one of our competition rockets landed in a different state than it was launched in!)
+                        <br><br>
+                        To solve this problem, I led a team of 10 Rice engineering students to develop a fully-integrated
+                        automatic recovery system for a payload inside a hobby rocket launched to 3,000 feet. The mechanism
+                        consisted of a paraglider-shaped stunt kite and a responsive system controlling two linear actuators,
+                        which would pull on either side of the kite, effectively steering the machine.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        <section class="autorec-poster-sec">
+            <div class="container">
+                <div class="v-flex">
+                    <div class="words-container">
+                    <p> This task involved creating a 3D design for the rocket using SolidWorks, consulting aerospace experts
+                        associated with my university, programming a raspberry pi, working with IMU and GPS sensor data, and
+                        writing lots of python code.
+                    </p>
+                </div>
+                    <h1>Project Poster</h1>
+                    <img src="/Assets/proj-page/auto_rec_poster.svg" alt="">
+                    <sub><div class="pop-open-btn" onclick="openPopup()">Click here for PDF Version</div></sub>
+                </div>
+            </div>
+
+            <div class="popup" id="pop1">
+                <div class="flex">
+                    <div class="cs-bg">
+                        <div class="x-button">
+                            <button id="pop-close-btn" onclick="closePopup()"><img src="/Assets/proj-page/x_button.png"
+                                    alt="X"></button>
+                        </div>
+                        <h4>Automatic Rocket Recovery System</h4>
+                        <div class="pdf-emb">
+                                <embed class="poster-pdf" src="/Assets/proj-page/auto_rec_poster.pdf" type="application/pdf"
+                                    width="100%" height="100%" toolbar="true"/>
+                        </div>
+        
+        
+                    </div>
+        
+                </div>
+            </div>
+
+        </section>
+
+        <section class="autorec-body-2" id="pl-bg">
+            <div class="container">
+                <div class="h-flex">
+                    <div class="words-container">
+                        <p> 
+                            A critical problem our team faced was the difficulty in testing our system. Launching rockets requires
+                            traveling to a launch site and money for the engines, which we quickly realized was unsustainable and
+                            highly inconvenient. We tried dropping the payload off of the Rice University Football Stadium, but
+                            needed more height to get any useful data.
+                
+                            So, we designed a system to attach the payload to a drone, fly it to our desired height, and drop it.
+                
+                            This system involved a simple locking pin system, where we attached a drone to a tube, and placed the
+                            payload inside, held in place by a linear actuator with its leg extended through a hole in the tube. The
+                            drone would carry the whole system into the air, and at a certain height (500ft), a signal was sent to
+                            the linear actuator making it contract, causing the payload to fall out of the tube. Finally, the kite
+                            and servo system would guide the payload back down to the ground.
+                
+                            After testing our system in April 2024, we got some successful readings from the drone test system,
+                            which indicate our payload was able to navigate itself in the correct direction!
+                
+                            This project was presented to represent Rice Eclipse at the 2024 Oshman Engineering Design Showcase at
+                            the Ion District in Houston. See more [here](KoreKau.mp4)
+                        </p>
+                    </div>
+                    <div class="outer-flex">
+                        <img src="/Assets/proj-page/recovery-bay-pic.png" alt="">
+                        <div class="flex">
+                            <h1>The Motivation</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+        
+
+    </section>
+
+    <script>
+        document.addEventListener('scroll', function() {
+        // Get the scroll position
+        var scrollPosition = window.scrollY || window.pageYOffset;
+
+        // Get the element to move
+        var movingElement = document.getElementById('moveR');
+
+        // Move the element to the right based on scroll position
+        movingElement.style.left = 400 + scrollPosition * 2.5 + 'px';
+    });
+
+    </script>
+
+    <script>
+    // Parallax
+        let background = document.querySelector('#pl-bg');
+        window.addEventListener("scroll", () => {
+            let value = window.scrollY;
+            background.style.backgroundPositionY = (-value * 0.4) + 600 + "px";
+        });
+
+    </script>
+
+    <script>
+        // Function to open popup
+        function openPopup() {
+            let popup = document.getElementById("pop1");
+            if (popup) {
+                popup.classList.add("open-popup");
+                document.body.style.overflow = "hidden"; // Prevent scrolling on the body
+            }
+        }
+
+        // Function to close popup
+        function closePopup() {
+            let popup = document.getElementById("pop1");
+            if (popup) {
+                popup.classList.remove("open-popup");
+                document.body.style.overflow = ""; // Restore scrolling on the body
+            }
+        }
+
+        // Event listeners to open popups
+        let popClose = document.getElementById("pop-close-btn")
+        popClose.addEventListener('click', () => {
+            closePopup(); 
+        });
+
+        // Event listeners to close popups
+        let popOpen = document.getElementById("pop-open-btn")
+        popOpen.addEventListener('click', () => {
+            openPopup(); 
+        });
+        
+
+    </script>
+</body>
+
+</html>

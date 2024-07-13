@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/Assets/WebsiteLogo.png" type="image/png">
+
   <title>Beck Edwards</title>
 </head>
 
@@ -40,15 +42,13 @@
 
   <section class="projects-section">
     <div class="space-container">
-        <div class="space-flex ufo-flex-1">
-          <a href="/projects/WorkingTogether.html">
+        <div class="space-flex ufo-flex-1" id="ufo-1">
             <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-1">
-          </a>
           </div>
-        <div class="space-flex ufo-flex-2">
+        <div class="space-flex ufo-flex-2" id="ufo-2">
             <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-2">
         </div>
-       <div class="space-flex ufo-flex-3">
+       <div class="space-flex ufo-flex-3" id="ufo-3">
         <img src="/Assets/proj-page/UFO_WorkingTogether.png" alt="" class="ufo-3">
        </div>
         
@@ -75,9 +75,14 @@
 
 
   <script>
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
     function sway(element) {
-      const amplitude = 10; // The maximum distance the object moves up and down
-      const period = 3000; // Duration of one full cycle in milliseconds
+      const amplitude = getRandomInt(15, 25); // The maximum distance the object moves up and down
+      const period = getRandomInt(2000, 4000); // Duration of one full cycle in milliseconds
       const intercept = 270; 
 
       function animate() {
@@ -92,9 +97,82 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-      const swayObject = document.getElementsByClassName("space-flex");
-      sway(swayObject);
+      const objects = document.getElementsByClassName("space-flex");
+      for (var i = 0; i < objects.length; i++) {
+        var swayObject = objects[i];
+        sway(swayObject);
+      }
+      
     });
+
+
+  </script>
+
+  <script>
+
+  function moveUFO() {
+    const ufo1 = document.getElementById('ufo-1');
+    const ufo2 = document.getElementById('ufo-2');
+    const ufo3 = document.getElementById('ufo-3');
+
+    const minWidth = 800;
+    const maxWidth = 1170;
+
+    const screenWidth = window.innerWidth;
+    const movePercentage = ((maxWidth - screenWidth) * (1 / (maxWidth - minWidth)));
+
+    if (screenWidth > minWidth && screenWidth < maxWidth) {
+      ufo1.style.left = `${30 + (movePercentage * 20)}%`;
+      ufo2.style.top = `${300 + (movePercentage * 270)}px`;
+      ufo2.style.left = `${70 - (movePercentage * 20)}%`;
+      ufo3.style.top = `${700 + (movePercentage * 400)}px`;
+      ufo3.style.left = `${35 + (movePercentage * 15)}%`;
+
+    } else if (screenWidth <= minWidth) {
+      ufo1.style.left = `50%`;
+      ufo2.style.left = `50%`;
+      ufo2.style.top = `570px`;
+      ufo3.style.left = `50%`;
+      ufo3.style.top = `1100px`;
+    
+    } else if (screenWidth > maxWidth) {
+        ufo1.style.left = `30%`;
+        ufo1.style.top = `60px`;
+        ufo2.style.top = `300px`;
+        ufo2.style.left = `70%`;
+        ufo3.style.top = `700px`;
+        ufo3.style.left = `35%`;
+        
+    } 
+  }
+
+    window.addEventListener('load', moveUFO);
+
+    window.addEventListener('resize', moveUFO);
+
+
+  </script>
+
+  <script> 
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var eclipseUFO = document.getElementById('ufo-1');
+    var wtUFO = document.getElementById('ufo-2'); 
+    var mriUFO = document.getElementById('ufo-3'); 
+    
+    eclipseUFO.addEventListener('click', function() {
+        window.location.href = '/projects/Eclipse.html';
+    });
+
+    wtUFO.addEventListener('click', function() {
+        window.location.href = '/projects/WorkingTogether.html';
+    });
+
+    wtUFO.addEventListener('click', function() {
+        window.location.href = '/projects/MRI-Epilepsy.html';
+    });
+  
+  });
   
   </script>
 
