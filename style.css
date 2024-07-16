@@ -43,13 +43,16 @@ a {
     flex-direction: column;
 }
 
+.grid {
+    display: grid;
+}
+
 .banner {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
 
 
 .hover-rise {
@@ -64,11 +67,13 @@ a {
 
 #navbar{
     background-color: var(--purp);
-    z-index: 9;
-    height: 80px;
+    z-index: 10;
     border-bottom: var(--yell) 4px solid;
 }
 
+.navbar p {
+    font-size: 30px;
+}
 
 .navbar li {
     display: flex;
@@ -90,14 +95,12 @@ a {
     align-items: center;
     height: 100%;
     font-size: 26px;
-    
 }
 
 nav a { 
     align-self: center;
     color: var(--book-yellow-dark);
     padding: 20px 20px 20px 20px;
-    margin: 5px;
     /* border-radius: 8px; */
     font-size: larger;
     transition: background-color .25s, box-shadow .15s;
@@ -118,16 +121,125 @@ nav a:hover {
 }
 
 
- .navbar .container {
+.navbar .container {
+    display: none;
     max-width: 1300px;
     margin: auto;
     overflow: hidden;
 }
 
+
 #navbar {
   position: sticky;
   top: 0;
 }
+
+
+
+/* Hamburger menu icon styling */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+
+@media (max-width: 900px) {
+
+    
+   
+    .navbar .container {
+        display: flex;
+        height: 82px;
+    }
+    
+    .nav p {
+        padding-left: 20px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .navbar .flex{
+        justify-content: left;
+        padding-left: 30px;
+        align-items: center;
+    }
+
+    .navbar li {
+        display: contents;
+    }
+
+    
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        top: 76px; 
+        left: 0px;
+        background-color: var(--purp);
+        z-index: 10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-bottom: var(--yell) solid 4px;
+    }
+
+    .nav ul {
+        list-style-type: none;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav a {
+        margin: 0px;
+        padding: 10px;
+        display: block;
+        width: 100vw;
+    }
+
+    
+
+    /* Show the navigation menu when .show class is added */
+    .nav.show {
+        display: flex;
+    }
+}
+
+
+
 
 /* Main Page 1 */
 
@@ -212,7 +324,7 @@ nav a:hover {
 .mp1 .blurb-flex {
     display: block;
     width: 400px;
-    z-index: 100;
+    z-index: 5;
     padding: 20px;
     background-color: var(--purp);
 }
@@ -233,7 +345,7 @@ nav a:hover {
     width: 400px; /* Set the desired width of the rectangle */
     height: 400px; /* Set the desired height of the rectangle */
     background-color: var(--yell);
-    z-index: 99; 
+    z-index: 4; 
     margin-top: 10px; /* Optional: Add margin to separate the rectangle from the flexbox */
     top: 20%; /* Position below the flexbox */
     left: 20px;
@@ -407,8 +519,13 @@ nav a:hover {
 
 /* Eclipse Page */
 
+.p23 {
+    font-size: 23px;
+}
+
 .autorec-heading {
-    background-color: var(--shaded);
+    background-color: black;
+    background-image: url(/Assets/proj-page/bg_stars.png);
     border-bottom: goldenrod solid 4px;
 }
 
@@ -422,7 +539,7 @@ nav a:hover {
 .autorec-heading .flex {
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, var(--shaded), var(--shaded), var(--shaded), var(--shaded), transparent); /* Gradient from black to transparent */
+    background: linear-gradient(to right, transparent, black, black, black, transparent); /* Gradient from black to transparent */
     height: 200px;
     width: 600px;
     z-index: 1;
@@ -430,10 +547,23 @@ nav a:hover {
 
 .autorec-heading .flex .cool-title {
     position: relative;
-    height: 300px;
+    height: fit-content;
     width: auto;
 
 }
+
+.autorec-heading .flex .cool-title::before {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust the width of the rectangle */
+    height: 100px; /* Adjust the height of the rectangle */
+    background-color: #333; /* Color of the rectangle */
+    position: absolute;
+    left: -70px; /* Adjust the position to create space between rectangle and image */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 .autorec-heading h1 {
     position: absolute;
@@ -455,6 +585,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.672);
+    background-image: url(/Assets/proj-page/bg_stars.png);
     padding: 15px 0px 15px 0px;
 
 }
@@ -469,7 +600,7 @@ nav a:hover {
 .autorec-body-h .h-flex h1 {
     font-size: 4em;
     font-weight: 400;
-    color: black;
+    color: white;
 }
 
 
@@ -478,7 +609,6 @@ nav a:hover {
 }
 
 .autorec-body-1 p {
-    font-size: 23px;
     text-align: center;
 }
 
@@ -535,7 +665,7 @@ nav a:hover {
 
 
 .autorec-poster-sec h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 300;
     text-align: center;
     padding: 10px 0px 10px 0px;
@@ -543,7 +673,6 @@ nav a:hover {
 
 .autorec-poster-sec p {
     text-align: center;
-    font-size: 23px;
 }
 
 .autorec-poster-sec .words-container {
@@ -553,71 +682,196 @@ nav a:hover {
 }
 
 .autorec-body-2 {
-    background-color: var(--dpurp);
+    background-image: url(/Assets/proj-page/bg_stars.png);
+    border-top: var(--shaded) solid 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 
 }
 
 .autorec-body-2 .h-flex {
     justify-content: center;
-    gap: 100px;
 }
 
-.autorec-body-2 .h-flex .plx {
-    height: 500px;
-    border-left: solid #272626 5px;
+.autorec-body-2 .grid {
+    width: 80%;
+    padding-top: 0px;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(229, 226, 226, 0.395);
+    border-left: var(--shaded) solid 5px;
+    border-right: var(--shaded) solid 5px;
+    
+}
 
+.autorec-body-2 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.autorec-body-2 h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.autorec-body-2 .header .flex {
+    width: 350px;
+    height: 100px;
+    margin: 20px;
+    background-color: #d4b72580;
+    border: var(--shaded) solid 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+.autorec-body-2 p {
+    text-align: center;
+}
+
+
+
+
+.autorec-body-2 .img-cont {
+    display: flex;
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-position-x: 40%
+}
+
+
+
+.autorec-body-2 .clip-diagonal {
+    width: 100%; /* Set the height of the image */
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+    object-fit: cover; /* Ensure the image covers the entire clipping path */
 
 }
 
-.autorec-body-2 .plx img {
-    height: 100%;
-}
+
 
 .autorec-body-2 .words-container {
-    padding-top: 60px;
+    padding-top: 40px;
+    margin-left: 70px;
     display: flex;
-    width: 40vw;
-    text-align: center;
+    width: 80%;
+    align-items: end;    
 
 }
 
 .autorec-body-2 p {
-    font-size: 23px;
+    text-align: center;
 }
 
 
 #pl-bg {
-    background-image: url(/Assets/proj-page/planet-bg.svg);
-   background-size: 200vw;
+    background-image: url(/Assets/proj-page/recovery-bay-pic.png);
+   background-size: 150%;
    background-position-y: inherit;
-   background-repeat: no-repeat;
 }
 
 
-.autorec-body-2 .container {
-    padding: 40px 0px 40px 0px;
+.autorec-body-3 {
+    background-color: var(--shaded);
 }
 
-.autorec-body-2 .h-flex {
-    background-color: rgba(249, 248, 246, 0.688);
-    padding: 40px 0px 40px 0px;
-    border-top: #272626eb solid 4px;
-}
-
-
-.autorec-body-2 .h-flex .outer-flex {
-    display: flex;
-    flex-direction: row;
+.autorec-body-3 .h-flex {
+    justify-content: center;
     align-items: center;
+
 }
 
-.autorec-body-2 .h-flex .outer-flex img{
-    width: 1fr;
+.autorec-body-3 .words-container {
+    padding: 40px;
 }
 
-.autorec-body-2 .h-flex .outer-flex .flex{
-    width: 1fr;
+.autorec-body-3 .video-cont {
+    padding: 40px;
 }
+
+.autorec-body-3 .video-cont iframe {
+    border: #D4B625 solid 4px;
+}
+
+
+@media (max-width: 1100px) {
+
+    .autorec-body-3 .h-flex .words-container p {
+        text-align: center;
+    }
+
+    .autorec-body-3 .video-cont iframe{
+        width: 90vw;
+    }
+
+    .autorec-body-3 .h-flex {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .autorec-body-h {
+        display: none;
+    }
+
+    .autorec-heading .container .flex {
+        width: 100vw;
+    }
+
+    .autorec-heading .container {
+        left: 0%;
+    }
+
+    .autorec-body-1 .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .autorec-body-1 .clip-diagonal {
+        clip-path: none;
+    }
+
+    .autorec-body-1 .words-container {
+        width: 80vw;
+    }
+
+    .autorec-body-1 .img-cont {
+        margin-top: 20px;
+        border: #D4B625 solid 4px;
+    }
+
+    .autorec-body-2 .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .autorec-body-2 .h-flex .img-cont {
+        display: none;
+    }
+
+    .autorec-body-2 .words-container {
+        padding-top: 40px;
+        margin-left: 0px;
+        display: flex;
+        width: 100%;
+        align-items: center;  
+        justify-content: center;  
+    
+    }
+
+    .autorec-body-2 .words-container p {
+        padding: 0px 30px 0px 30px; 
+    
+    }
+
+    
+
+}
+
 
 
 
@@ -742,7 +996,7 @@ footer {
 }
 
 .footer-flex p {
-    font-size: 1.3em;
+    font-size: 25px;
 }
 
 

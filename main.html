@@ -17,16 +17,22 @@
       <a href="index.html">
         <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
       </a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+        
+      </div>
 
-      <nav>
+      <nav class="nav" id="nav-menu">
         <ul>
-          <li><a href="main.html">Biography</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li><a href="main.html"><p>Biography</p></a></li>
+          <li><a href="projects.html"><p>Projects</p></a></li>
+          <li><a href="resume.html"><p>Resume</p></a></li>
         </ul>
       </nav>
     </div>
-  </div>
 
   <!-- Main Page 1 -->
   <section class="mp1">
@@ -92,6 +98,7 @@
     
   </footer>
 
+  <script src="/script.js"></script>
 
   <script>
   const elementToMove = document.getElementById('blurb');

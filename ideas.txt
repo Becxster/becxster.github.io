@@ -5,3 +5,8 @@ it changes to a different picture of me
 
 3. Use PDF.js (import using cdn) to make embedded pdfs smoother
 
+4. Change navbar to turn into the three lines dropdown menu
+when viewed on mobile
+
+5. Make projects page the main thing somehow, and make the main page
+have more of the main stuff
