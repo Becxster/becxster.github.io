@@ -27,7 +27,7 @@
 
       <nav class="nav" id="nav-menu">
         <ul>
-          <li><a href="main.html"><p>Biography</p></a></li>
+          <li><a href="main.html"><p>Home</p></a></li>
           <li><a href="projects.html"><p>Projects</p></a></li>
           <li><a href="resume.html"><p>Resume</p></a></li>
         </ul>
@@ -35,8 +35,49 @@
     </div>
 
 
-    
+    <section class="resume-head">
+        <div class="v-flex">
+            <h1>Current Resume</h1>
+            <sub>Click resume to view as a pdf or download it using the button below:</sub>
+                <button onclick="downloadDoc()">
+                    <div class="flex">
+                        <img src="/Assets/res-page/pdf-download-2617.svg" alt="">
+                        <p>Download Resume</p>
+                        <img src="/Assets/res-page/pdf-download-2617.svg" alt="">
+
+                    </div>
+                </button>
+            <div class="iframe-wrapper">
+                <iframe id="google-docs-iframe" src="https://docs.google.com/document/d/e/2PACX-1vR2D2K28KicVuuVDhbE1sFnstWncsoMvsHs6WQBggdlcTxKYHBmgBX6aPoDt3fAYj-1xNDS-QUepYCo/pub?embedded=true" height="1056px" width="840px" frameborder="0"></iframe>
+            </div>    
+        </div>
+    </section>
+
+
 <script src="/script.js"></script>
+
+<script>
+    function downloadDoc() {
+        window.location.href = 'https://docs.google.com/document/d/1KAqn1UPIiAR39ge-fNeF3pfQnfRBTOpCAIeiq7eo5wk/export?format=pdf';
+    }
+</script>
+
+<script>
+    function scaleIframe() {
+      const iframe = document.getElementById('google-docs-iframe');
+      const wrapper = iframe.parentElement;
+      const scale = wrapper.offsetWidth / 840; // Initial width of the Google Doc
+      iframe.style.transform = `scale(${scale})`;
+      iframe.style.width = `${840 / scale}px`; // Adjust the iframe's width to match the scale
+      iframe.style.height = `${1056 / scale}px`; // Adjust the iframe's height to match the scale
+    }
+
+    // Initial scaling
+    scaleIframe();
+
+    // Re-scale on window resize
+    window.addEventListener('resize', scaleIframe);
+  </script>
 
 </body>
 </html>

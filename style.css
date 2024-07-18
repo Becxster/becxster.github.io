@@ -625,10 +625,30 @@ nav a:hover {
 }
 
 
+
 .autorec-body-1 .img-cont {
+    position: relative;
     display: flex;
     width: 60vw;
+    z-index: 2;
 }
+
+.autorec-body-1 .img-cont::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 8px;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    
+   
+    background: linear-gradient(to bottom, var(--yell), var(--dpurp) );
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+    pointer-events: none; /* Ensure the border does not interfere with interaction */
+
+}
+
 
 
 
@@ -636,12 +656,14 @@ nav a:hover {
     width: 100%; /* Set the height of the image */
     clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
     object-fit: cover; /* Ensure the image covers the entire clipping path */
+    z-index: 2;
 
 }
 
 
 .autorec-poster-sec {
     background-color:var(--posterblue);
+    border-top: var(--dpurp) solid 5px;
 }
 
 
@@ -877,7 +899,6 @@ nav a:hover {
 
 
 
-
 /* POPUPS */
 .popup {
     position: fixed;
@@ -1003,7 +1024,100 @@ footer {
 
 
 
+/* Resume */
 
+.resume-head .v-flex {
+    align-items: center;
+}
+
+.resume-head h1 {
+    font-size: 40px;
+    padding: 10px 10px 0px 10px;
+}
+
+
+.resume-head sub {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+
+.resume-head button {
+    border-radius: 5px;
+    background-color: rgba(48, 48, 48, 0.832);
+    color: white;
+    margin-bottom: 10px;
+    border: rgba(218, 165, 32, 0.631) solid 3px;
+    transition: transform 0.3s ease, background-color 0.1s ease-in;; 
+    &:hover {
+        cursor: pointer;
+        background-color: var(--yell);
+        transform: scale(1.05); 
+    }
+}
+
+
+.resume-head button .flex {
+    justify-content: center;
+    padding-top: 10px;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    padding: 5px;
+
+}
+
+.resume-head button .flex img {
+    height: 20px;
+}
+
+.resume-head .iframe-wrapper {
+    position: relative;
+    width: 840px;
+    height: 1056px;
+    /* Padding-top is set to maintain the aspect ratio (e.g., 16:9 aspect ratio is 56.25% padding-top) */
+    overflow: hidden;
+  }
+
+.resume-head .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    overflow: hidden;
+  }
+
+  .resume-head .iframe-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: auto;
+    height: 99.5%;
+    width: 99%;
+    background: linear-gradient(to bottom right, var(--yell),  rgb(0, 105, 0), rgb(2, 2, 154), rgb(0, 105, 0), blue);
+    z-index: -1;
+  }
+
+  
+
+@media (max-width: 900px) {
+    .resume-head .iframe-wrapper {
+        position: relative;
+        width: 90vw;
+        height: calc(90vw * 1.257); /* Aspect ratio of 840:1056 */
+        overflow: hidden;
+      }
+    
+}
+
+.resume-head {
+
+}
+
+
+
+
+/* Rainbow stuff */
 
 .rainbow-box {
     box-sizing: content-box;
@@ -1012,6 +1126,8 @@ footer {
     animation: glow1 3s linear infinite;
     
 }
+
+
 
 
 
