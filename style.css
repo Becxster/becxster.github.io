@@ -7,6 +7,7 @@
     --shaded: #272626;
     --dpurp: #662583;
     --posterblue: #3d85c6ff;
+    --swiper-theme-color: #7449f6 !important;
     
  }
 
@@ -135,6 +136,61 @@ nav a:hover {
 }
 
 
+.nav .h-flex {
+    justify-content: left;
+    align-items: center;
+    height: 42px;
+    gap: 15px;
+}
+
+.nav .nav-carrot {
+    height: 50%;
+}
+
+
+
+.dropdown-menu {
+      display: none; /* Initially hidden */
+      position: absolute;
+      top: 100%; /* Position below the flexbox */
+      left: 0;
+      width: 216px;
+      background-color: var(--dpurp);
+      color: white;
+      text-align: left;
+      padding: 0;
+      border-top: var(--yell) solid 4px; 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1; /* Ensure it appears above other elements */
+    }
+
+    
+
+    /* Show the dropdown menu on hover */
+    a:hover .dropdown-menu {
+      display: block;
+    }
+
+    a:hover .nav-carrot {
+        transition: .25s ease;
+        transform: rotate(90deg);
+    }
+
+    a:not(:hover) .nav-carrot {
+        transition: .25s;
+    }
+
+    /* Styles for the dropdown items */
+    .dropdown-item {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover {
+        background-color: var(--yell);
+        transition: background-color .25s, box-shadow .15s;
+    }
+
 
 /* Hamburger menu icon styling */
 .menu-icon {
@@ -236,6 +292,10 @@ nav a:hover {
     .nav.show {
         display: flex;
     }
+
+    a .nav-carrot {
+       display: none;
+    }
 }
 
 
@@ -307,11 +367,9 @@ nav a:hover {
     position: relative;
 }
 
-.mp1 #blurb {
+.mp1 #blurb1 {
     position: absolute;
-    margin: 70px 100px 100px 0;
-    left: 400px;
-    
+    margin: 50px 100px 100px 0;    
   }
   
 
@@ -323,7 +381,7 @@ nav a:hover {
 
 .mp1 .blurb-flex {
     display: block;
-    width: 400px;
+    width: 500px;
     z-index: 5;
     padding: 20px;
     background-color: var(--purp);
@@ -337,19 +395,141 @@ nav a:hover {
     font-size: 1em;
 }
 
+/* Swiper */
+
+.swiper-pagination, .swiper-button-next, .swiper-button-prev {
+    z-index: 3;
+  }
+
+  /* Hide all slides initially */
+.swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+}
+  
+  /* Show the active slide */
+  .swiper-slide-active {
+    opacity: 1;
+  }
+  
+  /* Hide the next slide */
+  .swiper-slide-next {
+    opacity: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: purple; 
+  }
+
+  .custom-button-prev, .custom-button-next {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    transition: 0.3s ease;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .custom-button-next {
+    transform: rotate(180deg);
+  }
+
+  .mp1 .h-flex .swiper-container {
+    width: 100%;
+    background-color: #2726264f;
+    border-top: var(--shaded) solid 3px;
+    height: 300px;
+    position: relative;
+    color: white;
+    margin-bottom: 0px;
+    bottom: 0;
+    
+}
+
+.mp1 .custom-button-next img, .mp1 .custom-button-prev img {
+    width: 60px;
+    height: 100%;
+}
+
+.mp1 .proj-spotlight-head {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 131px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 6px;
+    color: var(--yell);
+
+    
+}
+
+
+
 .mp1 .links-flex-container {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    width: 400px; /* Set the desired width of the rectangle */
-    height: 400px; /* Set the desired height of the rectangle */
+    width: 550px; /* Set the desired width of the rectangle */
+    height: 500px; /* Set the desired height of the rectangle */
     background-color: var(--yell);
     z-index: 4; 
     margin-top: 10px; /* Optional: Add margin to separate the rectangle from the flexbox */
     top: 20%; /* Position below the flexbox */
     left: 20px;
 
+}
+
+
+
+
+.mp1 .links-flex-container .h-flex{
+    position: relative;
+    align-items: center;
+
+}
+
+.mp1 .h-flex  {
+    height: 300px;
+    width: 100%;
+}
+
+
+.mp1 .h-flex .custom-button-prev {
+    left: 0px;
+    opacity: 30%;
+
+    &:hover {
+        opacity: 100%;
+    }
+
+    
+}
+
+.mp1 .h-flex .custom-button-next {
+    right: 0px;
+    opacity: 30%;
+
+    &:hover {
+        opacity: 100%;
+    }
+}
+
+
+.mp1 .h-flex .swiper-container {
+    left: 0px;
+}
+
+
+.mp1 .h-flex .custom-button-next, 
+.mp1 .h-flex .custom-button-prev,
+.mp1 .h-flex .swiper-container {
+    position: absolute;    
+    
 }
 
 .mp1 .links-flex {
@@ -368,9 +548,29 @@ nav a:hover {
     height: 150px;
   }
 
+  /* Swiper Slideshow */
+
+  .mp1 .swiper-slide.first-slide .v-flex {
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mp1 .swiper-slide.first-slide .proj-spotlight-eclipse {
+    font-size: large;
+    border-radius: 5px;
+    background-color: var(--shaded);
+    padding: 5px;
+  }
+
   
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
+
+    .mp1 {
+        padding-bottom: 40px;
+    }
+
+    
     .mp1 .overlap-container .face-img {
         position: relative;
         top: -80px;
@@ -382,10 +582,9 @@ nav a:hover {
 
     .mp1 .overlap-container {
         display: flex;
-        width: 400px;
+        width: auto;
         height: 800px;
-        justify-content: center;
-        /* align-items: center; */
+        align-items: center;
 
     }
 
@@ -393,10 +592,12 @@ nav a:hover {
        display: none;
     }
 
-    .mp1 .overlap-container .dec2 {
-        top: 0px;
-        left: -300px;
+    .mp1 .overlap-container .face-img {
+        justify-self: center;
+        position: relative;
+        z-index: 2;
     }
+    
 
     .mp1 .main-container {
         display: flex;
@@ -411,7 +612,13 @@ nav a:hover {
     .mp1 .links-flex-container {
         left: 0px;
         border-radius: 10px;
+        width: 500px; /* Set the desired width of the rectangle */
+        height: 400px;
+        top: 150px;
+
     }
+
+    
 
     .mp1 .blurb-flex {
         border-top-left-radius: 10px;
@@ -423,12 +630,41 @@ nav a:hover {
         text-align: center;
     }
 
-    #blurb {
+    .mp1 .overlap-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .mp1 .overlap-container .item {
         position: relative;
-        margin: 0;
-        top: 320px;
-        left: 0px;
+    }
+
+    /* .mp1 .overlap-container .item.flex {
+        align-items: center;
+
+    } */
+    
+
+    #blurb1 {
+        display: flex;
+        position: relative !important;
+        margin: 0 !important;
+        left: 0;
               
+    }
+
+    .mp1 .proj-spotlight-head {
+        height: auto;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin: 6px;
+        color: var(--yell);
+    
+        
     }
   
   }
