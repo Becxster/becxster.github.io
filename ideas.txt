@@ -11,6 +11,7 @@ when viewed on mobile
 5. Make projects page the main thing somehow, and make the main page
 have more of the main stuff
 
-6. FIX THE DROPDOWN
+6. FIX THE DROPDOWN: The project items do not actually link to their 
+pages, just the UFO page since theyre under the same id as the <a>
 
 https://docs.google.com/document/d/1KAqn1UPIiAR39ge-fNeF3pfQnfRBTOpCAIeiq7eo5wk/export?format=pdf

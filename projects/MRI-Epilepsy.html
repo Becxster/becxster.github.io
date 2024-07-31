@@ -18,11 +18,30 @@
         <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
       </a>
 
-      <nav>
+      <nav class="nav" id="nav-menu">
         <ul>
-          <li><a href="/home.html">Home</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/resume.html">Resume</a></li>
+          <li><a href="home.html">
+              <p>Home</p>
+            </a></li>
+          <li><a id="hoverBox">
+  
+            <div class="h-flex">
+              <p>Projects</p>
+              <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
+              <div id="dropdownMenu" class="dropdown-menu">
+                <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
+                <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together</div>
+                <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
+                <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
+              </div>
+            </div>
+              
+              
+            </a></li>
+            
+          <li><a href="resume.html">
+              <p>Resume</p>
+            </a></li>
         </ul>
       </nav>
     </div>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/Assets/WebsiteLogo.png" type="image/png">
+
+    <title>Beck Edwards</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <div class="container flex">
+            <a href="index.html">
+                <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
+            </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+        </div>
+
+        <nav class="nav" id="nav-menu">
+            <ul>
+                <li><a href="/home.html">
+                        <p>Home</p>
+                    </a></li>
+                <li><a id="hoverBox">
+
+                        <div class="h-flex">
+                            <p>Projects</p>
+                            <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
+                            <div id="dropdownMenu" class="dropdown-menu">
+                                <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
+                                <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together
+                                </div>
+                                <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship
+                                </div>
+                                <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </a></li>
+
+                <li><a href="/resume.html">
+                        <p>Resume</p>
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="loewenstern-intro">
+        <div class="h-flex">
+            <div class="v-flex">
+                <img src="/Assets/loew-page/ccl-logo.png" alt="">
+            </div>
+            <div class="loew-intro">
+                <div class="content">
+                    
+                    <h1>Loewenstern Fellowship (São Paulo, Brazil)</h1>
+                    <p>In the summer of 2024, was awarded $8365 by Rice University to conduct a fellowship in São Paulo,
+                        Brazil with an emphasis on social impact. There, I participated in a program at Mackenzie
+                        Presbyterian University in Water Management and Sustainability, and interned in a neuroscience
+                        laboratory.
+                        <br>
+
+                        This experience was a humbling one. Solving social problems in the context of a different country,
+                        with a different culture, people, values, history, language, structure of government, and goals is
+                        not something a foreigner can do without lots of help from locals. I quickly realized that the most
+                        important way to spend my time was to immerse myself in the São Paulo way of life, in order to learn
+                        how Brazilians communicate and function, inside and out.
+                        <br>
+                        I took courses with Portuguese speaking students, who helped me learn the language. I dedicated
+                        hours every day to learning Portuguese, and was fluent enough to express myself after a month — two
+                        months later I could comfortably communicate with all citizens.
+                        <br>
+                        My partners at Mackenzie Presbyterian University helped me explore the issue of sustainability in
+                        Brazil from all different perspectives, which allowed me to learn the context and depth behind the
+                        problems Brazil faces related to environment. Together with a handful of Brazilian students from all
+                        different disciplines, I visited recycling plants, water management companies, an indigenous peoples
+                        reserve, museums, and much more.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer-flex">
+            <div class="item">
+                <p>Made from scratch with HTML, CSS, & JavaScript<br>
+            </div>
+            <div class="item">
+                <p>&#9775;</p>
+            </div>
+            <div class="item">
+                <p><a href="mailto:bae5@rice.edu">bae5@rice.edu</a></p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>

@@ -17,29 +17,97 @@
       <a href="index.html">
         <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
       </a>
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+        
+      </div>
 
-      <nav>
-        <ul>
-          <li><a href="/home.html">Home</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/resume.html">Resume</a></li>
-        </ul>
-      </nav>
+      <nav class="nav" id="nav-menu">
+      <ul>
+        <li><a href="/home.html">
+            <p>Home</p>
+          </a></li>
+        <li><a id="hoverBox">
+
+          <div class="h-flex">
+            <p>Projects</p>
+            <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
+            <div id="dropdownMenu" class="dropdown-menu">
+              <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
+              <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together</div>
+              <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
+              <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
+            </div>
+          </div>
+            
+            
+          </a></li>
+          
+        <li><a href="/resume.html">
+            <p>Resume</p>
+          </a></li>
+      </ul>
+    </nav>
     </div>
-  </div>
+
+  <section class="wt-1">
+    <div class="h-flex">
+      <div class="item">
+        <img src="/Assets/WT-page/book-standing.jpg" alt="">
+      </div>
+      <div class="item">
+        <div class="flex wt-intro">
+          <h1 class="wt-title">Website Development</h1>
+          <p>
+            In 2024, my professors, Dr. Mikki Hebl and Dr. Eden King, released a book called <i> Working Together </i>, a book
+            dedicated to uncovering the links between their Industrial Organizational Psychology research and the
+            importance of diversity in the workplace. I took charge in curating a website for their book on my own, completely
+            from scratch.
+            <br> <br>
+            <a href="https://becxster.github.io/workingtogether.github.io/" target="_blank">Workingtogetherbook.com</a> was coded from the bottom up using solely HTML, CSS, and JavaScript, which allowed me
+            various creative liberties that website builders like Weebly and Google Sites do not. Furthermore, I learned a lot about the technicals of web design in the process and my project
+            lowered the upkeep cost of their website by 300% annually!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wt-demo">
+    <div class="title-flex ">
+      <h1>Demo</h1>
+      <sub>Try the demo below, or visit the website at <a href="https://becxster.github.io/workingtogether.github.io/" target="_blank">workingtogetherbook.com</a></sub>
+    </div>
+   
+    <div class="container">
+      <div class="flex">
+        <iframe src="https://becxster.github.io/workingtogether.github.io/" width="100%" height="750px" frameborder="10px" scrolling="yes"></iframe>
+      </div>
+
+    </div>  
+  </section>
 
   <footer>
     <div class="footer-flex">
       <div class="item">
         <p>Made from scratch with HTML, CSS, & JavaScript<br>
       </div>
-      <div class="item"><p>&#9775;</p></div>
+      <div class="item">
+        <p>&#9775;</p>
+      </div>
       <div class="item">
         <p><a href="mailto:bae5@rice.edu">bae5@rice.edu</a></p>
       </div>
     </div>
-    
+
   </footer>
 
-  </body>
-  </html>
+  <script src="/script.js"></script>
+
+</body>
+
+</html>

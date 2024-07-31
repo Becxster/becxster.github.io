@@ -26,12 +26,31 @@
       </div>
 
       <nav class="nav" id="nav-menu">
-        <ul>
-          <li><a href="/home.html"><p>Home</p></a></li>
-          <li><a href="/projects.html"><p>Projects</p></a></li>
-          <li><a href="/resume.html"><p>Resume</p></a></li>
-        </ul>
-      </nav>
+      <ul>
+        <li><a href="/home.html">
+            <p>Home</p>
+          </a></li>
+        <li><a id="hoverBox">
+
+          <div class="h-flex">
+            <p>Projects</p>
+            <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
+            <div id="dropdownMenu" class="dropdown-menu">
+              <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
+              <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together</div>
+              <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
+              <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
+            </div>
+          </div>
+            
+            
+          </a></li>
+          
+        <li><a href="/resume.html">
+            <p>Resume</p>
+          </a></li>
+      </ul>
+    </nav>
     </div>
 
 
@@ -55,7 +74,7 @@
             <div class="words-container">
                 
                 <div class="item">
-                    <p>I have been a member of Rice Eclipse, Rice University's competition rocket club, since my
+                    <p>I have been a member of <a href="https://eclipse.rice.edu/" target=”_blank”>Rice Eclipse</a>, Rice University's competition rocket club, since my
                         freshman year. In 2023, I became a team lead.
                         <br><br>
                         Many of Eclipse's rockets end up in inconvenient places after launching due to winds and other

@@ -7,6 +7,25 @@ function redirectToPage(url) {
   window.location.href = url;
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hoverBox = document.getElementById('hoverBox');
+
+  hoverBox.addEventListener('click', function(event) {
+    const target = event.target;
+
+    // Check if the clicked element is a dropdown item
+    if (target.classList.contains('dropdown-item')) {
+      event.stopPropagation(); // Stop the event from bubbling up
+      const url = target.getAttribute('data-url');
+      window.location.href = url;
+    } else if (target.closest('#hoverBox') && !target.classList.contains('dropdown-item')) {
+      // If the target is inside the hoverBox but not a dropdown item
+      window.location.href = new URL('projects.html', window.location.origin);
+    }
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   const hoverBox = document.getElementById('hoverBox');
   const dropdownMenu = document.getElementById('dropdownMenu');
