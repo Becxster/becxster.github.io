@@ -1376,52 +1376,218 @@ nav #hoverBox:hover {
 
 
 .loewenstern-intro {
-    background-color: white;
+    position: relative;
     padding-top: 30px;
     z-index: 0;
-    
+    font-size: small;
+    background-color: #0D4E1D;
 }
 
 .loewenstern-intro .h-flex {
     flex: 1 0 50%;
+    justify-content: center;
 }
+
+.loewenstern-intro .logo-cont {
+    display: flex;
+    width: 100%;
+
+}
+
+.loew-intro-text h1{
+    text-align: center;
+}
+
+.loew-intro-text em {
+    color: lightpink;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+}
+
 
 
 
 .loewenstern-intro .h-flex .v-flex {
     padding: 0px 40px 0px 40px;
+    gap: 20px;
+    flex-grow: 1;
     
 }
 
 
 
-.loew-intro {
-    color: black;
-    z-index: 1;
-    flex: 1 0 50%;
-    
+
+
+.loew-intro-text .content {
+    width: 90vw;
+    padding: 40px;
+
 }
 
-.content::before {
+.loewenstern-intro .banner {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.687);
+    border-top: #272626 solid 4px;
+    border-bottom: #272626 solid 4px;
+    width: 100vw;
+    height: 100%;
+    padding: 40px 5vw 40px 5vw;
+    z-index: 2;
+    gap: 20px;
+}
+
+.loewenstern-intro .banner img {
+    width: 50%;
+}
+.loewenstern-intro .banner .x-mark {
+    font-weight: bold;
+    font-size: 4em;
+    background: linear-gradient(to right, #212E66, #f22020);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.loewenstern-intro::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("Assets/loew-page/brazil-flag.png") no-repeat center center;
-    background-size: cover;
-    filter: blur(10px); /* Adjust blur level as necessary */
-    z-index: -1; /* Ensure the pseudo-element is behind the content */
+    background: url('Assets/loew-page/brazil-flag.png') no-repeat center center;
+    background-size: cover; /* Cover the entire section */
+    z-index: 0; /* Ensure it's behind the content */
+    filter: brightness(35%); /* Optional brightness effect */
   }
 
+  .loewenstern-intro .loew-flex-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .loewenstern-intro .img-cont {
+    display: flex;
+    flex-grow: 1;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .loewenstern-intro .img-cont img {
+    width: 100%;
+    height: auto;
+    border: var(--yell) solid 4px;
+
+  }
+
+  .loew-flex-2 hr {
+
+  }
+
+  .loew-flex-2 h3 {
+    font-size: 2vw;
+    text-align: center;
+    color: #e5ebaf;
+  }
+
+  .loew-flex-2 .blog-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0a9956c;
+    border: #f0a995f0 solid 5px ;
+    border-radius: 10px;
+    padding: 10px;
+    flex-grow: 1;
+  }
+
+  .blog-flex .blog-btn {
+    padding: 20px;
+    font-size: large;
+    border-radius: 30px;
+    background: linear-gradient(to right, var(--yell), #f0a995f0);
+    border: white solid 2px;
+    color: var(--shaded);
+    transition: 0.3s ease; /* Smooth transition for hover effect */
+    &:hover {
+        cursor: pointer;
+        background: linear-gradient(to left, var(--yell), #f0a995f0);;
+        transform: scale(1.05); 
+    }
+  }
+
+  @media (max-width: 1080px) {
+
+    .loewenstern-intro .loew-flex-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loew-flex-2 h3{
+        font-size: larger;
+    }
+    
+    .loewenstern-intro .loew-flex-2 .img-cont {
+        width: auto;
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    
+
+    .loewenstern-intro .content  {
+        padding: 0px 0px 40px 0px;
+    }
+    .loewenstern-intro .loew-intro-text p {
+        text-align: center;
+    }
+
+    
+
+    
+
+    
+
+    .loewenstern-intro .h-flex.banner {
+        flex-direction: column;
+        gap: 0px;
+    }
+  }
+
+
+/*  */
+
+  .loew-logos {
+    background-color: rgba(255, 255, 255, 0.432);
+  }
+
+.loew-logos .h-flex {
+
+}
+
+.loew-logos .h-flex img {
+    object-fit: cover;
+}
+
+
+
+
+
+
   .loew-intro img {
-    z-index: 0;
   }
 
   .content {
     position: relative;
-    z-index: 1;
     color: white;
     font-size: 2em; /* Adjust as necessary */
     text-align: left;
