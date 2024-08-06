@@ -578,11 +578,11 @@ nav #hoverBox:hover {
     top: 260px;
     background-color: #212e6682;
     transition: background-color, color, ease 0.5s;
-    color: rgba(255, 255, 255, 0.438);
+    color: rgba(255, 255, 255, 0.789);
     font-size: large;
     &:hover {
         background-color: #212e66c9;
-        color: rgba(255, 255, 255, 0.942);
+        color: rgba(255, 255, 255, 0.982);
         cursor: pointer;
     }
 
@@ -594,7 +594,7 @@ nav #hoverBox:hover {
     border-radius: 5px;
     background-color: var(--shaded);
     padding: 5px;
-    opacity: 40%;
+    opacity: 60%;
 
   }
 
