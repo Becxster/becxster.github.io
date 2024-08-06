@@ -1,17 +1,20 @@
 1. when you click the picture, 
 it changes to a different picture of me
 
-2. Change fonts 
+OR 
 
-3. Use PDF.js (import using cdn) to make embedded pdfs smoother
+The picture spins around and there's a linkedin logo on the back
+of the 3D spinny thing :o
 
-4. Change navbar to turn into the three lines dropdown menu
-when viewed on mobile
+2. Change fonts?
 
-5. Make projects page the main thing somehow, and make the main page
-have more of the main stuff
+3. Fix things for mobile: 
+    I. Pop-ups
+    II. UFOs intersect on tablet and small phone
 
-6. FIX THE DROPDOWN: The project items do not actually link to their 
-pages, just the UFO page since theyre under the same id as the <a>
+4. NEED LINKEDIN LINK
+
+
+
 
 https://docs.google.com/document/d/1KAqn1UPIiAR39ge-fNeF3pfQnfRBTOpCAIeiq7eo5wk/export?format=pdf

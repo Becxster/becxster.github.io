@@ -36,8 +36,8 @@
               <p>Projects</p>
               <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
               <div id="dropdownMenu" class="dropdown-menu">
-                <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
-                <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together</div>
+                <div class="dropdown-item" data-url="/projects/Eclipse.html">Automated Rocket Recovery Ssystem</div>
+                <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together (Web Development)</div>
                 <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
                 <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
               </div>
@@ -198,7 +198,8 @@
   document.addEventListener('DOMContentLoaded', function() {
     var eclipseUFO = document.getElementById('ufo-1');
     var wtUFO = document.getElementById('ufo-2'); 
-    var mriUFO = document.getElementById('ufo-3'); 
+    var loewUFO = document.getElementById('ufo-3'); 
+    var mriUFO = document.getElementById('ufo-4'); 
     
     eclipseUFO.addEventListener('click', function() {
         window.location.href = '/projects/Eclipse.html';
@@ -208,7 +209,11 @@
         window.location.href = '/projects/WorkingTogether.html';
     });
 
-    wtUFO.addEventListener('click', function() {
+    loewUFO.addEventListener('click', function() {
+        window.location.href = '/projects/Loewenstern.html';
+    });
+
+    mriUFO.addEventListener('click', function() {
         window.location.href = '/projects/MRI-Epilepsy.html';
     });
   

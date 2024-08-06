@@ -14,39 +14,57 @@
   <!-- Navbar -->
   <div class="navbar" id="navbar">
     <div class="container flex">
-      <a href="index.html">
-        <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
-      </a>
+        <a href="index.html">
+            <h1 class="logo"><img src="/Images/wt-logo.png" alt=""></h1>
+        </a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
 
-      <nav class="nav" id="nav-menu">
-        <ul>
-          <li><a href="home.html">
-              <p>Home</p>
-            </a></li>
-          <li><a id="hoverBox">
-  
-            <div class="h-flex">
-              <p>Projects</p>
-              <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
-              <div id="dropdownMenu" class="dropdown-menu">
-                <div class="dropdown-item" data-url="/projects/Eclipse.html">Eclipse</div>
-                <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together</div>
-                <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
-                <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
-              </div>
-            </div>
-              
-              
-            </a></li>
-            
-          <li><a href="resume.html">
-              <p>Resume</p>
-            </a></li>
-        </ul>
-      </nav>
     </div>
-  </div>
 
+    <nav class="nav" id="nav-menu">
+        <ul>
+            <li><a href="/home.html">
+                    <p>Home</p>
+                </a></li>
+            <li><a id="hoverBox">
+
+                    <div class="h-flex">
+                        <p>Projects</p>
+                        <img class="nav-carrot" src="/Assets/carrot-arrow.svg" alt="">
+                        <div id="dropdownMenu" class="dropdown-menu">
+                            <div class="dropdown-item" data-url="/projects/Eclipse.html">Automated Rocket Recovery Ssystem</div>
+                            <div class="dropdown-item" data-url="/projects/WorkingTogether.html">Working Together (Web Development)</div>
+                            <div class="dropdown-item" data-url="/projects/Loewenstern.html">Loewenstern Fellowship</div>
+                            <div class="dropdown-item" data-url="/projects/MRI-Epilepsy.html">MRI Machine Learning</div>
+                        </div>
+                    </div>
+
+
+                </a></li>
+
+            <li><a href="/resume.html">
+                    <p>Resume</p>
+                </a></li>
+        </ul>
+    </nav>
+</div>
+
+
+  <section class="coming-soon">
+    <div class="container">
+      <h1>
+        COMING SOON
+      </h1>
+      <sub>
+        This page isn't ready yet 😮
+      </sub>
+    </div>
+    
+  </section>
 
   <footer>
     <div class="footer-flex">
@@ -60,5 +78,8 @@
     </div>
     
   </footer>
+
+  <script src="/script.js"></script>
+
   </body>
   </html>
