@@ -221,7 +221,7 @@
       const maxWindowWidth = 1700; // Maximum width where the element is in its original position
 
       let newLeft = minLeft;
-      if (windowWidth > 1000 && windowWidth < maxWindowWidth) {
+      if (windowWidth > 1000) {
         newLeft = (minLeft + (maxLeft - minLeft) * (windowWidth / maxWindowWidth)) * 4;
         element.style.left = `${newLeft}px`;
       } else if (windowWidth && windowWidth > maxWindowWidth) {
