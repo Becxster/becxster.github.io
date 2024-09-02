@@ -332,6 +332,13 @@ nav #hoverBox:hover {
     width: 540px; /* Ensure the images fit the container */
     height: 540px; /* Ensure the images fit the container */
     z-index: 2;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.dec0, .dec1, .dec2 {
+    pointer-events: none;
 }
 
 .mp1 .overlap-container .dec0 {

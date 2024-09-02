@@ -4,7 +4,7 @@ function toggleMenu() {
 }
 
 function redirectToPage(url) {
-  window.location.href = url;
+  window.open(url, '_blank');
 }
 
 
