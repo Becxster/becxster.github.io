@@ -78,10 +78,9 @@
           <div class="flex-container">
             <div class="blurb-flex">
               <h1>Hi There!</h1>
-              <p>My name is Beck Edwards, and I am a student at Rice University. I’m interested in using mathematics and
-                computers to solve cool problems and I have many interests: analyzing brain scans, building rockets, and
-                web
-                development, to name a few. Explore my website to learn more!</p>
+              <p>My name is Beck Edwards, and I am an Operations Research student at Rice University. I’m interested in using mathematics and
+                computers to solve problems related to energy & sustainability and have many interests: learning languages, rock climbing, sustainability, 
+                building rockets, and web development, to name a few. Explore my website to learn more!</p>
             </div>
             <div class="links-flex-container" id="blurb2">
               <img class="proj-spotlight-head" src="/Assets/bio-page/projects-spotlight-head.png" alt="">
@@ -152,7 +151,10 @@
           <p>Made from scratch with HTML, CSS, & JavaScript<br>
         </div>
         <div class="item">
-          <p>&#9775;</p>
+          <a href="https://www.linkedin.com/in/beck-edwards" target="_blank">
+            <img class="linkedin-logo" src="/Assets/linkedin-app-white-icon.webp" alt="&#9775;" width="30px">
+          </a>
+          
         </div>
         <div class="item">
           <p><a href="mailto:bae5@rice.edu">bae5@rice.edu</a></p>
@@ -216,26 +218,25 @@
     const blurb1 = document.getElementById('blurb1');
     const blurb2 = document.getElementById('blurb2');
 
-    function moveElement(element, minLeft, maxLeft) {
+    function moveElement(element, minLeft, maxLeft, defaultLeft) {
       const windowWidth = window.innerWidth;
       const maxWindowWidth = 1700; // Maximum width where the element is in its original position
-
-      let newLeft = minLeft;
-      if (windowWidth > 1000) {
+      
+      if (windowWidth > 1440) {
+        newLeft = defaultLeft
+        element.style.left = `${newLeft}px`;
+      } else if (windowWidth > 1000 && windowWidth <= 1440) {
         newLeft = (minLeft + (maxLeft - minLeft) * (windowWidth / maxWindowWidth)) * 4;
         element.style.left = `${newLeft}px`;
-      } else if (windowWidth && windowWidth > maxWindowWidth) {
-        newLeft = 700;
-        element.style.left = `${newLeft}px`;
-      } else {
+      }  else {
         element.style.left = '0';
       }
 
     }
 
     function handleResize() {
-      moveElement(blurb1, -100, 250);
-      moveElement(blurb2, -50, 30);
+      moveElement(blurb1, -100, 250, 800);
+      moveElement(blurb2, -50, 30, 70);
     }
 
   window.addEventListener('resize', handleResize);
