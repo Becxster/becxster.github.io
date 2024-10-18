@@ -98,33 +98,39 @@
               <img class="proj-spotlight-head" src="/Assets/bio-page/projects-spotlight-head.png" alt="">
               <div class="h-flex">
                 <div class="custom-button-prev"><img src="/Assets/bio-page/swiper-arrow-1.png" alt="<"></div>
-                <div class="swiper-container">
+                <div class="swiper-container rainbow-box">
                   <div class="swiper-wrapper" id="mySwiper">
+          
                     <div class="swiper-slide slide1">
+                      <a href="/projects/Eclipse.html">
                       <div class="abs-container">
                         <div class="banner">
                           <h1>Autonomous Rocket Recovery Glider</h1>
                         </div>
                         <img class="projspot-bg" src="/Assets/proj-page/auto_rec_poster.svg" alt="" height="">
-                        <a href="/projects/Eclipse.html">
+                        <!-- <a href="/projects/Eclipse.html">
                           <div class="banner see-more">
                             <sub>SEE MORE</sub>
                             </div>
-                        </a>
+                        </a> -->
                         </div>
+                      </a>
                       </div>
+                    
                     <div class="swiper-slide slide2">
+                      <a href="/projects/Loewenstern.html">
                       <div class="abs-container">
                         <div class="banner">
                           <h1>Loewenstern Fellowship in São Paulo, Brazil</h1>
                         </div>
                         <img class="projspot-bg" src="/Assets/loew-page/MackenzieGroupCropped.jpeg" alt="" height="">
-                        <a href="/projects/Loewenstern.html">
+                        <!-- <a href="/projects/Loewenstern.html">
                           <div class="banner see-more">
                             <sub>SEE MORE</sub>
                             </div>
-                        </a>
+                        </a> -->
                         </div>
+                        </a>
                     </div>
                   </div>
                   <!-- <div class="swiper-pagination"></div> -->
@@ -183,9 +189,9 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    document.getElementById('mySwiper').addEventListener('click', function () {
-      swiper.slideNext();
-    });
+    // document.getElementById('mySwiper').addEventListener('click', function () {
+    //   swiper.slideNext();
+    // });
 
     const swiper = new Swiper('.swiper-container', {
       effect: 'fade',
@@ -204,6 +210,11 @@
           }
         }
       },
+      autoplay: {
+      delay: 4000,  // Delay between transitions (in milliseconds)
+      disableOnInteraction: false,  // Keep autoplay running even when interacting
+      },
+      loop: true,
 
 
       // Navigation arrows
