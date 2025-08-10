@@ -66,6 +66,8 @@ a {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
+
+
 #navbar{
     background-color: var(--purp);
     z-index: 10;
@@ -1732,8 +1734,39 @@ nav #hoverBox:hover {
   }
 
 
-/*  */
+/* Rystad Page */
 
+.intro-rystad .v-flex {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;  /* top extra space */
+    padding-bottom: 20px; /* bottom extra space */
+    gap: 20px;
+}
+
+.intro-rystad .svg-wrapper {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-rystad .svg-wrapper img {
+    width: 50%;
+    height: auto; /* keeps aspect ratio */
+    display: block; /* removes default inline gap */
+}
+
+.intro-rystad .rystad-intro-text {
+    width: 80%;
+    color: #333;
+}
   
 
 
